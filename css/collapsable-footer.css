@@ -1,11 +1,13 @@
 body {
     font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-
 }
 
 .card-header {
     background-color: #273443;
     color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.1rem;
 }
 
 a:visited, a:link, a:hover, a:active,
@@ -26,5 +28,10 @@ a:visited, a:link, a:hover, a:active,
 }
 
 .card-body {
-    background-image: linear-gradient(#1c2836, #273443);
+    background-image: linear-gradient(#273443, #202d3b);
+}
+
+h4.mb-0 {
+    font-size: 22.4px;
+    font-weight: bolder;
 }
