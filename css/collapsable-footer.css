@@ -86,3 +86,27 @@ h4.mb-0 {
 .card-header:first-child{
     border-radius: 0;
 }
+
+.container.bottom-links {
+    background-color: #273443;
+    width:100%;
+}
+
+
+.container.bottom-links {
+    background-color: #273443;
+    min-width: 100%;
+    display: inline-table;
+    padding-left: 5%;
+    padding-bottom: 5px;
+    align-content: center;
+}
+
+.container.bottom-links a {
+    text-align: center;
+    min-width: auto;
+    color: white;
+    padding-right: 3%;
+    font-size: 0.7em;
+    display: inline-block;
+}
