@@ -34,6 +34,7 @@ function toggleKlantenservice() {
     element.classList.toggle("rotated");
 
     //double click prevention
+    //http://hyland.hypernode.io:8888/hlbeheer/admin/index/index/key/4890fbd63d6ced7fe391515edc2ad653a883c2b16e0ce1e0c135eedc49af65ba/
     setTimeout(function(){ 
         $(klantenserviceButton).prop('disabled', true);
     }, 50);
