@@ -1,44 +1,351 @@
-function toggleKwaliteit() {
-    var toggleButton = $("#kwaliteit-btn");
-    var element = document.getElementById("kwaliteit-arrow");
-    element.classList.toggle("rotated");
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+  <!--<![endif]-->
 
-    //double click prevention
-    setTimeout(function(){ 
-        $(toggleButton).prop('disabled', true);
-    }, 50);
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/0d01ffbfff.js"
+      crossorigin="anonymous"
+    ></script>
 
-setTimeout(function(){ 
-    $(toggleButton).prop('disabled', false);
-}, 250);
-}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
 
-function toggleBestellen() {
-        let bestelButton = $("#bestel-button");
-        let element = document.getElementById("bestellen-arrow");
-        element.classList.toggle("rotated");
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-//double click prevention
-    setTimeout(function(){ 
-            $(bestelButton).prop('disabled', true);
-        }, 50);
+    <link rel="stylesheet" href="css/collapsable-footer.css" />
+  </head>
 
-    setTimeout(function(){ 
-        $(bestelButton).prop('disabled', false);
-    }, 250);
-    }
+  <body>
+<div class="d-xl-none d-lg-none">
+    <div class="accordion text-decoration-none" id="accordionExample">
+      <div class="card text-decoration-none">
+        <div class="card-header text-decoration-none" id="headingOne">
+          <div class="container">
+            <div class="row">
+              <div class="col-10">
+                <button
+                  onclick="toggleKlantenservice()"
+                  id="klantenservice-button"
+                  class="btn btn-link collapsed text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  <h4 class="mb-0">
+                    Klantenservice
+                  </h4>
+                </button>
+              </div>
+              <div class="col-2 arrow-section">
+                <i
+                  id="klantenservice-arrow"
+                  class="fa fa-caret-left float-right"
+                  style="color:white"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
 
-function toggleKlantenservice() {
-    let klantenserviceButton = $("#klantenservice-button")
-    let element = document.getElementById("klantenservice-arrow");
-    element.classList.toggle("rotated");
+        <div
+          id="collapseOne"
+          class="collapse text-decoration-none"
+          aria-labelledby="headingOne"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body text-decoration-none">
+            <ul class="footer links text-decoration-none">
+              <li class="nav item text-decoration-none">
+                <a href="/klantenservice">Contact</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/garantie">Garantie</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/retourneren">Retourneren</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/commercial-climbing-frames"
+                  >Professionele speeltoestellen</a
+                >
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/vacatures">Vacatures</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card text-decoration-none">
+        <div class="card-header text-decoration-none" id="headingTwo">
+          <div class="container">
+            <div class="row">
+              <div class="col-10">
+                <h4 class="mb-0">
+                  <button
+                    onclick="toggleBestellen()"
+                    id="bestel-button"
+                    class="btn btn-link collapsed text-decoration-none"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Bestellen
+                  </button>
+                </h4>
+              </div>
+              <div class="col-2 arrow-section">
+                <i
+                  id="bestellen-arrow"
+                  class="fa fa-caret-left float-right"
+                  style="color:white"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="collapseTwo"
+          class="collapse text-decoration-none"
+          aria-labelledby="headingTwo"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body text-decoration-none">
+            <ul class="footer links text-decoration-none">
+              <li class="nav item text-decoration-none">
+                <a href="/bestellen">Bestellen</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/betalen">Betalen</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/levering">Levering</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/montage">Montage & Montageservice</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/accessoires/reserve-onderdelen"
+                  >Vervangende onderdelen</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card text-decoration-none">
+        <div class="card-header text-decoration-none" id="headingThree">
+          <div class="container">
+            <div class="row">
+              <div class="col-10">
+                <button
+                  onclick="toggleKwaliteit()"
+                  id="kwaliteit-btn"
+                  class="btn btn-link collapsed text-decoration-none"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  <h4 class="mb-0">Kwaliteit en veiligheid</h4>
+                </button>
+              </div>
+              <div class="col-2 arrow-section">
+                <i
+                  id="kwaliteit-arrow"
+                  class="fa fa-caret-left float-right"
+                  style="color:white"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="collapseThree"
+          class="collapse text-decoration-none"
+          aria-labelledby="headingThree"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body text-decoration-none">
+            <ul class="footer links text-decoration-none">
+              <li class="nav item text-decoration-none">
+                <a href="/montage">Montage</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/montage">Handleidingen</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/houtsoort-kwaliteit">Houtkwaliteit</a>
+              </li>
 
-    //double click prevention
-    setTimeout(function(){ 
-        $(klantenserviceButton).prop('disabled', true);
-    }, 50);
+              <li class="nav item text-decoration-none">
+                <a href="/houtsoort-kwaliteit">Verschil houtsoorten</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/houtsoort-kwaliteit">Duurzaamheid</a>
+              </li>
+              <li class="nav item text-decoration-none">
+                <a href="/veiligheid">Veiligheid</a>
+              </li>
+            </ul>
 
-setTimeout(function(){ 
-    $(klantenserviceButton).prop('disabled', false);
-}, 250);
-}
+          </div>
+        </div>
+
+        <div class="card text-decoration-none">
+          <div class="card-header text-decoration-none" id="headingThree">
+            <div class="container">
+              <div class="row">
+                <div class="col-10">
+                  <button class="btn btn-link text-decoration-none">
+                    <h4 class="mb-0">
+                      Social & Blog
+                    </h4>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-center">
+              <a
+                href="https://www.facebook.com/OfficialJungleGym"
+                TARGET="_blank"
+              >
+                <span class="fa-stack fa-lg" style="margin-right:15px;">
+                  <i class="fa fa-circle fa-stack-2x" style="color:#3b5998"></i>
+                  <i class="fab fa-facebook fa-stack-1x fa-inverse"></i> </span
+              ></a>
+              <a
+                href="https://www.instagram.com/junglegymofficial/"
+                TARGET="_blank"
+              >
+                <span class="fa-stack fa-lg" style="margin-right:15px;">
+                  <i class="fa fa-circle fa-stack-2x" style="color:#833ab4"></i>
+                  <i class="fab fa-instagram fa-stack-1x fa-inverse"></i> </span
+              ></a>
+              <a
+                href="https://nl.pinterest.com/junglegymofficial/"
+                TARGET="_blank"
+              >
+                <span class="fa-stack fa-lg" style="margin-right:15px;">
+                  <i class="fa fa-circle fa-stack-2x" style="color:#bd081c"></i>
+                  <i
+                    class="fab fa-pinterest-p fa-stack-1x fa-inverse"
+                  ></i> </span
+              ></a>
+              <a
+                href="https://www.youtube.com/user/junglegymplaygrounds"
+                TARGET="_blank"
+              >
+                <span class="fa-stack fa-lg" style="margin-right:15px;">
+                  <i class="fa fa-circle fa-stack-2x" style="color:#cd201f"></i>
+                  <i class="fab fa-youtube fa-stack-1x fa-inverse"></i> </span
+              ></a>
+              <a href="/blog"
+                ><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x" style="color:#4ec425"></i>
+                  <span
+                    style="color: white;    font-size: small;    position: absolute;  margin-left: 13px; font-weight: 600;"
+                    >blog</span
+                  >
+                </span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card text-decoration-none">
+          <div class="card-header text-decoration-none" id="headingThree">
+            <div class="container">
+              <div class="row">
+                <div class="col-10">
+                  <button class="btn btn-link text-decoration-none">
+                    <h4 class="mb-0">
+                      Blijf op de hoogte
+                    </h4>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-decoration-none">
+            <form
+              id="newsletter-validate-detail"
+              class="form subscribe"
+              action="https://www.junglegym.nl/newsletter/subscriber/new/"
+              method="post"
+              novalidate="novalidate"
+            >
+              <div class="field newsletter">
+                <label class="label" for="newsletter"
+                  ><span>Sign Up for Our Newsletter:</span></label
+                >
+                <div class="control">
+                  <input
+                    id="newsletter"
+                    style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC'); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"
+                    autocomplete="off"
+                    name="email"
+                    type="email"
+                    placeholder="E-mailadres"
+                    data-validate="{required:true, 'validate-email':true}"
+                  />
+                </div>
+              </div>
+              <div class="actions">
+                <button
+                  class="action subscribe primary"
+                  title="&gt;"
+                  type="submit"
+                >
+                  <span>&gt;</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
