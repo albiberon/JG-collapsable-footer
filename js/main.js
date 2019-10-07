@@ -1,44 +1,112 @@
-function toggleKwaliteit() {
-    var toggleButton = $("#kwaliteit-btn");
-    var element = document.getElementById("kwaliteit-arrow");
-    element.classList.toggle("rotated");
-
-    //double click prevention
-    setTimeout(function(){ 
-        $(toggleButton).prop('disabled', true);
-    }, 50);
-
-setTimeout(function(){ 
-    $(toggleButton).prop('disabled', false);
-}, 250);
+body {
+    box-sizing: border-box;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
-function toggleBestellen() {
-        let bestelButton = $("#bestel-button");
-        let element = document.getElementById("bestellen-arrow");
-        element.classList.toggle("rotated");
+.card-header {
+    background-color: #273443;
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.1rem;
+}
 
-//double click prevention
-    setTimeout(function(){ 
-            $(bestelButton).prop('disabled', true);
-        }, 50);
+a, a:visited, a:link, a:hover, a:active,
+.btn, .btn:visited, .btn:link, .btn:hover, .btn:active,
+.btn-link:hover, .btn-link:visited, .btn-link:link, .btn-link:active {
+    color: white;
+    text-decoration: none;
+}
 
-    setTimeout(function(){ 
-        $(bestelButton).prop('disabled', false);
-    }, 250);
-    }
+.btn {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
 
-function toggleKlantenservice() {
-    let klantenserviceButton = $("#klantenservice-button")
-    let element = document.getElementById("klantenservice-arrow");
-    element.classList.toggle("rotated");
+.card {
+    border-radius: 0%;
+    border:none;
+}
 
-    //double click prevention
-    setTimeout(function(){ 
-        $(klantenserviceButton).prop('disabled', true);
-    }, 50);
+.card-body {
+    background-image: linear-gradient(#273443, #202d3b);
+}
 
-setTimeout(function(){ 
-    $(klantenserviceButton).prop('disabled', false);
-}, 250);
+h4.mb-0 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card li{
+    font-weight:300;
+    -webkit-transition: font-weight 500ms;
+    -moz-transition: font-weight 500ms;
+      -o-transition: font-weight 500ms;
+         transition: font-weight 500ms;
+}
+
+.card li:hover{
+    font-weight: 500;
+}
+
+.fa.fa-caret-left.rotated {
+    -webkit-transform: rotate(270deg);  /* Chrome, Safari 3.1+ */
+    -moz-transform: rotate(270deg);  /* Firefox 3.5-15 */
+    -ms-transform: rotate(270deg);  /* IE 9 */
+    -o-transform: rotate(270deg);  /* Opera 10.50-12.00 */
+    transform: rotate(270deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+.field.newsletter .label {
+    color: white;
+}
+
+.block.newsletter .form.subscribe {
+    display: table;
+    width: 100%;
+    padding: 0px;
+}
+
+.block.newsletter .actions {
+    display: table-cell;
+    vertical-align: top;
+    width: 1%;
+}
+
+.block.newsletter .action.subscribe {
+    border-radius: 0 3px 3px 0;
+}
+
+.btn:disabled, .btn-link:disabled {
+    text-decoration: none;
+    color: white;
+}
+
+.card-header:first-child{
+    border-radius: 0;
+}
+
+.container.bottom-links {
+    background-color: #273443;
+    width:100%;
+}
+
+
+.container.bottom-links {
+    background-color: #273443;
+    min-width: 100%;
+    display: inline-table;
+    padding-left: 5%;
+    padding-bottom: 5px;
+    align-content: center;
+}
+
+.container.bottom-links a {
+    text-align: center;
+    min-width: auto;
+    color: white;
+    padding-right: 3%;
+    font-size: 0.7em;
+    display: inline-block;
 }
